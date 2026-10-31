@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#16a34a" />
+    <title>EasyFood on iPhone</title>
+    <link rel="icon" type="image/png" href="/favicon-32.png" />
+    <style>
+      :root {
+        --bg: #f6f7f5;
+        --card: #ffffff;
+        --text: #1c1f1a;
+        --muted: #5d6458;
+        --border: #e2e5df;
+        --green: #16a34a;
+        --green-soft: #e7f6ec;
+        --code-bg: #f1f3ef;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #121411;
+          --card: #1b1e19;
+          --text: #eef0ec;
+          --muted: #a3aa9d;
+          --border: #2c3029;
+          --green: #22c55e;
+          --green-soft: #17301f;
+          --code-bg: #242822;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.55 -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+        padding: env(safe-area-inset-top) 16px calc(env(safe-area-inset-bottom) + 32px);
+      }
+      main { max-width: 560px; margin: 0 auto; }
+      header { display: flex; align-items: center; gap: 14px; padding: 28px 0 8px; }
+      header img { width: 56px; height: 56px; border-radius: 13px; }
+      h1 { font-size: 1.5rem; line-height: 1.2; margin: 0; }
+      header p { margin: 2px 0 0; color: var(--muted); font-size: 0.95rem; }
+      h2 { font-size: 1.05rem; margin: 32px 0 10px; }
+      ol.steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+      ol.steps > li {
+        counter-increment: step;
+        position: relative;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 14px 14px 14px 56px;
+        margin-bottom: 10px;
+      }
+      ol.steps > li::before {
+        content: counter(step);
+        position: absolute;
+        left: 14px;
+        top: 14px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--green);
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      ol.steps b { font-weight: 600; }
+      .sub { color: var(--muted); font-size: 0.92rem; margin: 6px 0 0; }
+      .icon {
+        display: inline-flex;
+        vertical-align: -4px;
+        width: 20px;
+        height: 20px;
+        color: var(--green);
+      }
+      .note {
+        background: var(--green-soft);
+        border-radius: 14px;
+        padding: 12px 14px;
+        margin: 12px 0;
+      }
+      code {
+        background: var(--code-bg);
+        border-radius: 6px;
+        padding: 1px 6px;
+        font: 0.92em ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      ul.plain { padding-left: 20px; margin: 8px 0; }
+      ul.plain li { margin: 4px 0; }
+      dl { margin: 0; }
+      dt { font-weight: 600; margin-top: 14px; }
+      dd { margin: 4px 0 0; color: var(--muted); }
+      .cta {
+        display: block;
+        text-align: center;
+        background: var(--green);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 12px;
+        padding: 13px;
+        margin-top: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="/icon-192.png" alt="" />
+        <div>
+          <h1>EasyFood on your iPhone</h1>
+          <p>Set up in about 2 minutes. No App Store needed.</p>
+        </div>
+      </header>
+
+      <div class="note">
+        EasyFood is our shared meal planner. Once you've joined the household, we have the same recipes,
+        meal plan and grocery list, and anything one of us changes shows up on the other's phone within seconds.
+      </div>
+
+      <h2>Setting it up</h2>
+      <ol class="steps">
+        <li>
+          Open the link you got in the message in <b>Safari</b>.
+          <p class="sub">
+            If it opened inside WhatsApp or another app, tap the
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg>
+            compass or <b>Open in Safari</b> first. Only Safari can add apps to the Home Screen.
+          </p>
+        </li>
+        <li>
+          Tap the <b>Share</b> button
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          at the bottom of Safari.
+          <p class="sub">Don't see it? Tap <b>···</b> next to the address bar first, then <b>Share</b>.</p>
+        </li>
+        <li>
+          Scroll down and tap <b>Add to Home Screen</b>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>,
+          then <b>Add</b>. (If there's an <b>Open as Web App</b> switch, leave it on.)
+        </li>
+        <li>
+          Close Safari and open <b>EasyFood</b> from your Home Screen.
+          <p class="sub">Always use this icon from now on, not the Safari tab. The two keep separate data.</p>
+        </li>
+        <li>
+          Got an <b>invite</b> to a household? The app asks <b>"Join this household?"</b>. Tap <b>Join</b>. Done!
+          Just got the app link? You're already done, and everything you add stays on your phone.
+          <p class="sub">
+            Not asked? Tap the <b>gear</b> at the top of the Home tab to open Settings. Under <b>Household</b>,
+            type the code from the message (like <code>ABCD-EFGH-JKMN</code>) and tap <b>Join</b>.
+          </p>
+        </li>
+      </ol>
+
+      <h2>Make it yours</h2>
+      <p>
+        In <b>Settings → Nutrition profiles</b>, add a profile for yourself with your own daily targets. Profiles,
+        water and weight are personal and stay on your phone. Everything else is shared:
+      </p>
+      <ul class="plain">
+        <li>Recipes (also ones you add or edit)</li>
+        <li>The meal planner</li>
+        <li>The grocery list. Tick things off in the shop and it updates on the other phone too.</li>
+        <li>Pantry and freezer</li>
+      </ul>
+
+      <h2>Good to know</h2>
+      <dl>
+        <dt>No internet?</dt>
+        <dd>The app keeps working. Your changes are sent as soon as you're back online.</dd>
+        <dt>Updates</dt>
+        <dd>The app updates itself. A new version is used from the next time you open it.</dd>
+        <dt>Scanning barcodes</dt>
+        <dd>Allow camera access the first time you scan. The first scan needs internet to load the scanner.</dd>
+        <dt>Recipes from websites</dt>
+        <dd>Most recipe sites can't be imported on iPhone. Ask the Android phone to import it, and it shows up for you too.</dd>
+        <dt>Reminders</dt>
+        <dd>The freezer and expiry reminders only work in the Android app. On iPhone you won't get those notifications.</dd>
+        <dt>"Couldn't sync"?</dt>
+        <dd>Check your internet, then go to Settings → Household → <b>Sync now</b>.</dd>
+        <dt>Deleted the app by accident?</dt>
+        <dd>
+          Nothing is lost. The household keeps everything. Follow the steps above again and join with the same code.
+        </dd>
+      </dl>
+
+      <a class="cta" href="/">Open EasyFood</a>
+    </main>
+  </body>
+</html>
